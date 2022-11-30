@@ -53,10 +53,8 @@ function generatePassword() {
   for (i = 0; i < isPassLength; i++) {
   var randomNumber = Math.floor(Math.random() * collection.length);
   var passChar = collection.charAt(randomNumber);
-  console.log(passChar);
-  console.log(randomNumber);
-  var newPass = newPass.concat(passChar);
-  console.log("newPass = " + newPass);
+  newPass = newPass.concat(passChar);
+  
   }
   return newPass;
 }
