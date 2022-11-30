@@ -16,22 +16,27 @@ var isPassLength = prompt('How long would you like your password?');
 
 if (isUppercase) {
   // USE UPPER CASE LETTERS
-  collection.concat(upLetters);
+  collection = collection.concat(upLetters);
 }
 
 if (isLowercase) {
   // USE LOWER CASE LETTERS
-  collection.concat(listLetters);
+  collection = collection.concat(listLetters);
   }
 
 if (isSpecial) {
   // USE SPECIAL CHARACTER
-  collection.concat(isSpecial);
+  collection = collection.concat(listSpecial);
 }
 
 if (isNumber) {
  // USE A NUMBER
- collection.concat(listNumbers);
+ collection = collection.concat(listNumbers);
+}
+
+for (isPassLength; isPassLength < 8 || isPassLength > 128;){
+  alert("Please choose a length between 8 and 128");
+  var isPassLength = prompt('How long would you like your password?');
 }
 console.log(collection);
   return "";
