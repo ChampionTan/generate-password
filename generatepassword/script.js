@@ -6,32 +6,34 @@ var listSpecial = '!#$%&()*+,-./:;<=>?@[]^_`{|}~';
 var listLetters = 'abcdefghijklmnopqrstuvwxyz';
 var listNumbers = '0987654321';
 var upLetters = listLetters.toUpperCase();
+var collection = "";
 
 var isUppercase = confirm('Would you like to use uppercase?');
 var isLowercase = confirm('Would you like to use lowercase?');
 var isSpecial = confirm('Would you like to use special characters?');
 var isNumber = confirm('Would you like to use numbers?');
+var isPassLength = prompt('How long would you like your password?');
 
 if (isUppercase) {
-  // USE UPPERCASE LETTERS
-  console.log('uppercase');
+  // USE UPPER CASE LETTERS
+  collection.concat(upLetters);
 }
 
 if (isLowercase) {
   // USE LOWER CASE LETTERS
-  console.log('lowercase');
+  collection.concat(listLetters);
   }
 
 if (isSpecial) {
   // USE SPECIAL CHARACTER
-  console.log('special');
+  collection.concat(isSpecial);
 }
 
 if (isNumber) {
  // USE A NUMBER
- console.log('numbers');
+ collection.concat(listNumbers);
 }
-
+console.log(collection);
   return "";
 }
 
