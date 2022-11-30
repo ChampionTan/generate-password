@@ -7,6 +7,7 @@ function generatePassword() {
   var listNumbers = '0987654321';
   var upLetters = listLetters.toUpperCase();
   var collection = "";
+  var newPass = "";
 
   var isUppercase = confirm('Would you like to use uppercase?');
   var isLowercase = confirm('Would you like to use lowercase?');
@@ -33,6 +34,7 @@ function generatePassword() {
     // USE A NUMBER
     collection = collection.concat(listNumbers);
   }
+  console.log(isPassLength);
 
   for (isPassLength; isPassLength < 8 || isPassLength > 128;) {
     alert("Please choose a length between 8 and 128");
@@ -42,11 +44,21 @@ function generatePassword() {
 
 
   if (!isUppercase && !isLowercase && !isSpecial && !isNumber) {
-    alert("Please choose at least one value");
+    alert("Please choose at least one value, try again.");
       
   }
   console.log(collection);
-  return Math.floor(Math.random() * collection.length);
+  
+  
+  for (i = 0; i < isPassLength; i++) {
+  var randomNumber = Math.floor(Math.random() * collection.length);
+  var passChar = collection.charAt(randomNumber);
+  console.log(passChar);
+  console.log(randomNumber);
+  var newPass = newPass.concat(passChar);
+  console.log("newPass = " + newPass);
+  }
+  return newPass;
 }
 
 // Write password to the #password input
