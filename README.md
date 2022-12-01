@@ -10,4 +10,4 @@
 Refactored a random password generator so that it works as intended.
 
 ## Visuals
-![search engine optimization image]() 
+![search engine optimization image](generatepass.png) 
